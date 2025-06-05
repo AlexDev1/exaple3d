@@ -1,0 +1,10 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./static:/app/static
+    environment:
+      - DEBUG=True
+    restart: unless-stopped 
